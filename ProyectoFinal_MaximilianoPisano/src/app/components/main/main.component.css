@@ -16,11 +16,6 @@ p{
     position: static;
 }
 
-
-section{
-    margin-bottom: 70px !important;
-}
-
 section > div{
     margin-left: 20px !important;
 }

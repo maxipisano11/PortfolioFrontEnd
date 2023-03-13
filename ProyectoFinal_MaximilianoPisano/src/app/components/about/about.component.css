@@ -8,3 +8,12 @@
 #nombre{
     text-align: left;
 }
+
+#about > div{
+    margin-left: 20px !important;
+}
+
+.row{
+    margin-right: 0;
+    padding-bottom: 10px;
+}

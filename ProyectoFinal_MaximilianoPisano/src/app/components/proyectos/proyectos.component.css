@@ -1,0 +1,12 @@
+#proyectos{
+    position: static;
+    margin-bottom: 70px;
+}
+
+#proyectos > div{
+    margin-left: 20px !important;
+}
+
+a{
+    color: #94f8d7;
+}

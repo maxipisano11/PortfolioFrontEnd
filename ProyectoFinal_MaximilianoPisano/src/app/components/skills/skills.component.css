@@ -1,3 +1,8 @@
 #skills{
     position: static;
+    margin-bottom: 70px;
+}
+
+#skills > div{
+    margin-left: 20px !important;
 }
