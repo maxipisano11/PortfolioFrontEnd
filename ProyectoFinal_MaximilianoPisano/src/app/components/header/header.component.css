@@ -1,0 +1,41 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    height: 115px;
+    background-color: rgb(58, 58, 255);
+}
+
+nav > div > img {
+    position: static;
+    vertical-align: middle;
+    margin-left: 1%;
+    min-height: 80%;
+    max-height: 90%;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+#accesos {
+    font-size: 30px;
+    color: white;
+}
+
+ul > li {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+ul > li > a:hover {
+    color:cadetblue;
+}
+
+#login:hover{
+    color:cadetblue;
+}
