@@ -3,6 +3,10 @@
     margin-bottom: 70px;
 }
 
-#skills > div{
-    margin-left: 20px !important;
+h3{
+    text-align: left;
+}
+.row{
+    margin: 20px !important;
+    text-align: center;
 }

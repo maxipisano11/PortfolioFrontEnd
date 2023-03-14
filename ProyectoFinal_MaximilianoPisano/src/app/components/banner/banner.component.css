@@ -1,11 +1,8 @@
 #banner{
+    margin: 0;
     text-align: center;
     position: inherit;
     margin-top: 115px;
     background-image: url("../../../assets/img/banner.png");
     height: 465px;
-}
-
-#banner > h3{
-    text-align: center;
 }

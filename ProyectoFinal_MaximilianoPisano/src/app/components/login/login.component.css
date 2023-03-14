@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.formLogin > input{
+input{
     margin: 20px;
     text-align: center;
     padding: 20px;

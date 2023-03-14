@@ -1,26 +1,8 @@
 main{
     background-image: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #040477 0, 
-    #1212ad 55.41%, #1717ff 70.72%, #0446fd 79.34%, #0446fd 85.23%, #1717ff 92.56%, #1212ad 100%
+    #1212ad 55.41%, #1717ff 70.72%, #0434bb 79.34%, #032faa 85.23%, #0101df 92.56%, #1212ad 100%
     );
     color: #fff;
     font-family: 'Orbitron', sans-serif;
-    margin-bottom: 0;
-}
-
-h3{
-    text-align: left;
-}
-
-p{
-    text-align: justify;
-    position: static;
-}
-
-section > div{
-    margin-left: 20px !important;
-}
-
-section > .row{
-    margin-right: 0;
-    padding-bottom: 10px;
+    margin: 0 70;
 }

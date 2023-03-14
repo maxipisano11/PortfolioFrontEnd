@@ -1,6 +1,6 @@
 #proyectos{
     position: static;
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
 }
 
 #proyectos > div{

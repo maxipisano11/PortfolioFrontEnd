@@ -1,37 +1,182 @@
-<section id="skills">
-    <div class="container">
-        <h3>Skills</h3>
-        <label for="CSS">CSS</label>
-        <div id="CSS" class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped" style="width: 60%; height: 50px;">60%</div>
+<section id="skills" class="row">
+    <h3>Skills</h3>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="80"
+                [radius]="100"
+                [title]="'CSS'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+                
+            ></circle-progress>
         </div>
-        <label for="HTML">HTML</label>
-        <div id="HTML" class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-success" style="width: 75%; height: 50px;">75%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="85"
+                [radius]="100"
+                [title]="'HTML'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="JS">JavaScript</label>
-        <div id="JS" class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-info" style="width: 70%; height: 50px;">70%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="85"
+                [radius]="100"
+                [title]="'JS'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="PHP">PHP</label>
-        <div id="PHP" class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-success" style="width: 75%; height: 50px;">75%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="95"
+                [radius]="100"
+                [title]="'PHP'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="JAVA">Java</label>
-        <div id="JAVA" class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-danger" style="width: 40%; height: 50px;">40%</div>
+        <div class="col-12  col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="70"
+                [radius]="100"
+                [title]="'Java'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="WS">Windows Server</label>
-        <div id="WS" class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-info" style="width: 70%; height: 50px;">70%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="40"
+                [radius]="100"
+                [title]="'C#'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
+        </div>  
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="60"
+                [radius]="100"
+                [title]="'Win Server'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="C#">C#</label>
-        <div id="C#" class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-danger" style="width: 30%; height: 50px;">30%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="95"
+                [radius]="100"
+                [title]="'MySQL'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
-        <label for="MySQL">MySQL</label>
-        <div id="MySQL" class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped bg-success" style="width: 75%; height: 50px;">75%</div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="70"
+                [radius]="100"
+                [title]="'GitHub'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
         </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="100"
+                [radius]="100"
+                [title]="'T.Colaborativo'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
+        </div> 
+        <div class="col-12 col-sm-6 col-md-3">
+            <circle-progress
+                [percent]="65"
+                [radius]="100"
+                [title]="'Inglés'"
+                [titleColor]="'#3d3d'"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#6363FD'"
+                [innerStrokeColor]="'#3939FF'"
+                [animation]="true"
+                [animationDuration]="300"
+            ></circle-progress>
+        </div>        
     </div>
 </section>
