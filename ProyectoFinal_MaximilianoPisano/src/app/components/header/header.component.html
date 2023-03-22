@@ -4,10 +4,12 @@
             <img class="navbar-brand" src="../../../assets/img/APLogo-20-20.png" alt="logoArgentinaPrograma">
             <ul id="accesos" class="d-flex text-right"  >
                 <li class="nav-item" title="Instagram"><a href="https://www.instagram.com/maxi.pisano" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="nav-item" title="facebook"><a href="https://www.facebook.com/maxipisano" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="nav-item" title="Facebook"><a href="https://www.facebook.com/maxipisano" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                 <li class="nav-item" title="LinkedIn"><a href="https://www.linkedin.com/in/maximiliano-emmanuel-pisano-5b41971b7" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="nav-item" title="GitHub"><a href="https://github.com/maxipisano11" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li class="nav-item" id="login"><i title="Iniciar Sesión" id="i-login" class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></li>
+                <li class="nav-item" id="login"><i title="Iniciar Sesión" id="i-login" *ngIf="!isLogged" class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></li>
+                <li class="nav-item" id="logout"><i title="Cerrar Sesión" id="i-logOut" (click)="onLogout()" *ngIf="isLogged" class="fa-solid fa fa-sign-out"></i></li>
+                
             </ul>
         </div>
       </nav>

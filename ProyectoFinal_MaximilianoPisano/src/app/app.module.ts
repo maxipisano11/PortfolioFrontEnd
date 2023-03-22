@@ -16,6 +16,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
 
 
 @NgModule({
@@ -36,10 +38,13 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

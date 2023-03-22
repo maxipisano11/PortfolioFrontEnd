@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Sesión</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #003d50">Iniciar Sesión</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
@@ -13,7 +13,7 @@
                 </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button submit" class="btn btn-primary" >Ingresar</button>
+                    <button type="button submit" class="btn btn-primary" data-bs-dismiss="modal">Ingresar</button>
                 </div>
             </form>
             

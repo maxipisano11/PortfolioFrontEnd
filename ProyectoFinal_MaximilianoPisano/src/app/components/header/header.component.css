@@ -39,3 +39,7 @@ ul > li > a:hover {
 #login:hover{
     color:cadetblue;
 }
+
+#logout:hover{
+    color:cadetblue;
+}
