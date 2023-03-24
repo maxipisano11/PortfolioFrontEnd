@@ -1,32 +1,20 @@
 <section id="edu">
     <div class="container">
         <h3>Educación</h3>
-        <div class="row">
-            <p class="col-6 col-auto">
-                Febrero 2008 - Febrero 2011
-            </p>
-            <p class="col-6 col-auto">
-                Licenciatura en Sistemas (Universitario/Incompleto) <br />
-                Universidad Nacional de La Plata
-            </p>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+                Nueva Educación
+            </button>
         </div>
-        <div class="row">
-            <p class="col-6 col-auto">
-                Enero 2021 - Marzo 2021
-            </p>
-            <p class="col-6 col-auto">
-                Programación JavaScript (Certificación)<br />
-                Fundación Telefónica Movistar
-            </p>
-        </div>
-        <div class="row">
-            <p class="col-6 col-auto">
-                Octubre 2022 - En curso
-            </p>
-            <p class="col-6 col-auto">
-                Curso Inglés Nivel III<br />
-                CAAEP (Centro de Altos Estudios en Especialidades Policiales)
-            </p>
-        </div>
+        <table class="table">
+            <tbody>
+                <tr  *ngFor="let Educacion of edu" >
+                    <td class=".text-light"><b>{{Educacion.periodoEdu}}</b></td>
+                    <td class=".text-light"><b>{{Educacion.nombreEdu}}</b><br />{{Educacion.descripcionEdu}}</td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" routerLink="/editedu/{{Educacion.id}}"><i class="fa fa-pencil-square" aria-hidden="true"  ></i> Editar</button></td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" (click)="delete(Educacion.id)"><i class="fa fa-trash" aria-hidden="true"></i> Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>

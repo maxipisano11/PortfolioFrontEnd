@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="periodoEx">Período</label>
+                    <input type="text" class="form-control" autocomplete="off" placeholder = "Mes y Año inicio - Mes y Año fin" id="periodoEx" name="periodoEx" [(ngModel)]="periodoEx" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreEx">Puesto - Empresa</label>
+                    <input type="text" class="form-control" autocomplete="off" id="nombreEx" name="nombreEx" [(ngModel)]="nombreEx" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionEx">Descripción</label>
+                    <textarea class="form-control" rows="5" autocomplete="off"id="descripcionEx" name="descripcionEx" [(ngModel)]="descripcionEx" required></textarea>
+                </div>
+                <button class="btn btn-info">
+                    Agregar Experiencia
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
