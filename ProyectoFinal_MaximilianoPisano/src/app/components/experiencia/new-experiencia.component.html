@@ -1,23 +1,31 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="periodoEx">Período</label>
-                    <input type="text" class="form-control" autocomplete="off" placeholder = "Mes y Año inicio - Mes y Año fin" id="periodoEx" name="periodoEx" [(ngModel)]="periodoEx" required>
-                </div>
-                <div class="form-group">
-                    <label for="nombreEx">Puesto - Empresa</label>
-                    <input type="text" class="form-control" autocomplete="off" id="nombreEx" name="nombreEx" [(ngModel)]="nombreEx" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcionEx">Descripción</label>
-                    <textarea class="form-control" rows="5" autocomplete="off"id="descripcionEx" name="descripcionEx" [(ngModel)]="descripcionEx" required></textarea>
-                </div>
-                <button class="btn btn-info">
-                    Agregar Experiencia
-                </button>
-            </form>
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <h3>Nueva Experiencia Laboral</h3>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="periodoEx">Período</label>
+                        <input type="text" class="form-control" autocomplete="off" placeholder = "Mes y Año inicio - Mes y Año fin" id="periodoEx" name="periodoEx" [(ngModel)]="periodoEx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombreEx">Puesto - Empresa</label>
+                        <input type="text" class="form-control" autocomplete="off" id="nombreEx" name="nombreEx" [(ngModel)]="nombreEx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionEx">Descripción</label>
+                        <textarea class="form-control" rows="5" autocomplete="off"id="descripcionEx" name="descripcionEx" [(ngModel)]="descripcionEx" required></textarea>
+                    </div>
+                    <button class="btn btn-info">
+                        Agregar Experiencia
+                    </button>
+                </form>  
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </section>

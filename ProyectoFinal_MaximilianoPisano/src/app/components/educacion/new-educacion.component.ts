@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Educacion } from 'src/app/model/educacion';
+import { ImpEducacionServiceService } from 'src/app/service/imp-educacion-service.service';
 
 @Component({
   selector: 'app-new-educacion',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewEducacionComponent implements OnInit {
 
-  constructor() { }
+  periodoEdu: string ='';
+  nombreEdu: string ='';
+  descripcionEdu: string = '';
+  constructor(private impEducacionService: ImpEducacionServiceService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+  
+  onCreate(): void{
+    const expe = new Educacion(this.periodoEdu, this.nombreEdu, this.descripcionEdu);
+    this.impEducacionService.save(expe).subscribe(data=>{
+      alert("Educación agregada");
+      this.router.navigate(['']);
+    },err =>{
+      alert("No se pudo añadir la educación");
+      this.router.navigate(['']);
+    })
   }
 
 }

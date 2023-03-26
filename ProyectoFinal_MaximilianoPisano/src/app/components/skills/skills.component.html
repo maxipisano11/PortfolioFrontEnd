@@ -1,11 +1,14 @@
 <section id="skills" class="row">
     <h3>Skills</h3>
+    <div class="col-lg-2" id="boton">
+        <button type="button" routerLink="/nuevaskill" class="btn btn-primary" *ngIf="isLogged"> Nueva Skill</button>
+    </div>
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-3">
+        <div class="col-12 col-sm-6 col-md-3 skill" *ngFor ="let skill of skill">
             <circle-progress
-                [percent]="80"
+                [percent]="(skill.porcentaje)"
                 [radius]="100"
-                [title]="'CSS'"
+                [title]="(skill.nombre)"
                 [titleColor]="'#3d3d'"
                 [showUnits]="false"
                 [showSubtitle]="false"
@@ -17,8 +20,21 @@
                 [animationDuration]="300"
                 
             ></circle-progress>
+
+            <div>
+                <td *ngIf="isLogged" class=".text-light"><button title="Editar" class="btn btn-outline-light" routerLink="/editskill/{{skill.id}}"><i class="fa fa-pencil-square" aria-hidden="true"  ></i></button></td>
+                <td *ngIf="isLogged" class=".text-light"><button title="Borrar" class="btn btn-outline-light" (click)="delete(skill.id)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+
+            </div>
+            
         </div>
-        <div class="col-12 col-sm-6 col-md-3">
+               
+    </div>
+</section>
+
+<!--
+
+    <div class="col-12 col-sm-6 col-md-3">
             <circle-progress
                 [percent]="85"
                 [radius]="100"
@@ -177,6 +193,6 @@
                 [animation]="true"
                 [animationDuration]="300"
             ></circle-progress>
-        </div>        
-    </div>
-</section>
+        </div> 
+
+-->

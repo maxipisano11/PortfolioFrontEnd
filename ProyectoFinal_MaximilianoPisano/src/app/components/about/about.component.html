@@ -1,6 +1,9 @@
 <section id="about">
-    <img id="fotoCv" src="../../../assets/img/FotoCV.jpg" alt="FotoMaxi">
+    <img id="fotoCv" src="{{persona.img}}" alt="FotoDePerfil">
     <div class="row">
+        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
+            Editar datos personales
+        </button>
         <p id="nombre" class="col-4">
            <b>{{persona.nombre}} {{persona.apellido}}<br /></b>
             Full Stack Developer Jr
@@ -9,9 +12,7 @@
         <div class="col-4"></div>
     </div>
     <div class="row">
-        <p>
-            Soy desarrollador Web en el ministerio de Seguridad de la Provincia de Buenos Aires desde hace 7 años.
-            Orientando siempre a utilizar nuevas tecnologías, reforzar conocimientos y afrontar desafíos.
-        </p>
+        <p>{{persona.descripcion}}</p>
     </div>
 </section>
+

@@ -10,3 +10,13 @@ h3{
     margin: 20px !important;
     text-align: center;
 }
+
+#boton{
+    text-align: left;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

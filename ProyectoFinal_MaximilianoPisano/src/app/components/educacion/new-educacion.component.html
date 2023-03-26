@@ -1,2 +1,30 @@
-<p>new-educacion works!</p>
-
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <h3>Nueva Educación</h3>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="periodoEdu">Período</label>
+                        <input type="text" class="form-control" autocomplete="off" placeholder = "Mes y Año inicio - Mes y Año fin" id="periodoEdu" name="periodoEdu" [(ngModel)]="periodoEdu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombreEdu">Puesto - Empresa</label>
+                        <input type="text" class="form-control" autocomplete="off" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionEdu">Descripción</label>
+                        <textarea class="form-control" rows="5" autocomplete="off"id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" required></textarea>
+                    </div>
+                    <button class="btn btn-info">
+                        Agregar Experiencia
+                    </button>
+                </form>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
