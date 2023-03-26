@@ -22,6 +22,9 @@
                         <label for="img">Imagen</label>
                         <input type="file" class="form-control" autocomplete="off" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                     </div>
+                    <div>
+                      <img [src]="imageService.url" width="200px" alt="">
+                    </div>
                     <button class="btn btn-info">
                         Actualizar Persona
                     </button>

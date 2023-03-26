@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
+import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class EditAboutComponent implements OnInit {
   constructor( 
     private personaService: PersonaService,
     private activatedRoute: ActivatedRoute,
-    private router : Router
+    private router : Router,
+    public imageService: ImageService
   ) {  }
 
   ngOnInit(): void {
@@ -31,8 +33,9 @@ export class EditAboutComponent implements OnInit {
 
   onUpdate():void{
     const id= this.activatedRoute.snapshot.params['id'];
+    this.persona.img = this.imageService.url;
     this.personaService.update(id, this.persona).subscribe(
-      data=> {
+      data => {
         this.router.navigate(['']);
       }, err => { 
         alert("Error al modificar datos personales");
@@ -43,6 +46,8 @@ export class EditAboutComponent implements OnInit {
   }
 
   uploadImage($event : any){
-
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "fotoPerfil_" + id;
+    this.imageService.uploadImage($event, name);
   }
 }

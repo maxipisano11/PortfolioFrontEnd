@@ -1,18 +1,20 @@
 <section id="about">
-    <img id="fotoCv" src="{{persona.img}}" alt="FotoDePerfil">
+    <img id="fotoCv" src="{{persona?.img}}" alt="FotoDePerfil">
     <div class="row">
-        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
-            Editar datos personales
+        <button type="button" class="btn btn-primary col-2" routerLink="/editabout/1" *ngIf="isLogged">
+            Editar info personal
         </button>
+    </div>
+    <div class="row">
         <p id="nombre" class="col-4">
-           <b>{{persona.nombre}} {{persona.apellido}}<br /></b>
+           <b>{{persona?.nombre}} {{persona?.apellido}}<br /></b>
             Full Stack Developer Jr
         </p>
         <h3 class="col-4">Acerca de mí...</h3>
         <div class="col-4"></div>
     </div>
     <div class="row">
-        <p>{{persona.descripcion}}</p>
+        <p>{{persona?.descripcion}}</p>
     </div>
 </section>
 
