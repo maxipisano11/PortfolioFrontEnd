@@ -1,9 +1,10 @@
 <section id="about">
     <img id="fotoCv" src="{{persona?.img}}" alt="FotoDePerfil">
     <div class="row">
-        <button type="button" class="btn btn-primary col-2" routerLink="/editabout/1" *ngIf="isLogged">
-            Editar info personal
+        <button type="button" class="btn btn-primary col-1" routerLink="/editabout/1" *ngIf="isLogged">
+            Editar información personal
         </button>
+        <div class="col-11"></div>
     </div>
     <div class="row">
         <p id="nombre" class="col-4">

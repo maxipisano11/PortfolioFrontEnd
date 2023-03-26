@@ -1,0 +1,38 @@
+<section class="vh-100 gradient-custom" *ngIf="proyecto">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <h3>Editar Proyecto</h3>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="periodoEx">Período</label>
+                        <input type="text" class="form-control"  autocomplete="off" placeholder = "Mes y Año inicio - Mes y Año fin" id="periodoEx" name="periodo" [(ngModel)]="proyecto.periodo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" autocomplete="off" id="nombre" name="nombre" [(ngModel)]="proyecto.nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionEx">Descripción</label>
+                        <textarea class="form-control" rows="5" autocomplete="off" id="descripcion" name="descripcion" [(ngModel)]="proyecto.descripcion" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="enlace">Link al Proyecto</label>
+                        <input type="text" class="form-control" autocomplete="off" id="enlace" name="enlace" [(ngModel)]="proyecto.enlace">
+                    </div>
+                    <button class="btn btn-info">
+                        Actualizar
+                    </button>
+                    <button class="btn btn-info" id="home-proyecto" routerLink="">
+                        Volver
+                    </button>
+                </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,19 +1,21 @@
 <section id="proyectos">
     <div class="container">
         <h3>Proyectos</h3>
-        <div class="row">
-            <label><b>Portfolio Web</b></label>
-            <p class="col-6 col-auto">
-                Octubre 2022 - Marzo 2023
-            </p>
-            <div class="col-6 col-auto">
-                <p>
-                Portfolio web personal. 
-                </p>
-                <p>
-                    <a href="#">Portfolio-MaximilianoPisano</a>
-                </p>    
-            </div>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevoproyecto" *ngIf="isLogged">
+                Nuevo Proyecto
+            </button>
         </div>
+        <table class="table">
+            <tbody>
+                <tr  *ngFor="let Proyecto of proyectos" >
+                    <td class=".text-light"><b>{{Proyecto.nombre}}</b><br />{{Proyecto.periodo}}</td>
+                    <td class=".text-light">{{Proyecto.descripcion}} <br /><a *ngIf="Proyecto.enlace != ''" href="{{Proyecto.enlace}}" target="_blank">{{Proyecto.nombre}}</a></td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" routerLink="/editproyecto/{{Proyecto.id}}"><i class="fa fa-pencil-square" aria-hidden="true"  ></i>Editar</button></td>
+                    <td *ngIf="isLogged" class=".text-light"><button class="btn btn-outline-light" (click)="delete(Proyecto.id)"><i class="fa fa-trash" aria-hidden="true"></i>Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    
 </section>
