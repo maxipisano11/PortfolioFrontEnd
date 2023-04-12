@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
-import { ImpExperienciaServiceService } from 'src/app/service/imp-experiencia-service.service';
+import { ImpExperienciaService } from 'src/app/service/imp-experiencia.service';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -12,7 +12,7 @@ export class NewExperienciaComponent implements OnInit {
   periodoEx: string ='';
   nombreEx: string ='';
   descripcionEx: string = '';
-  constructor(private impExperienciaService: ImpExperienciaServiceService, private router: Router) { }
+  constructor(private impExperienciaService: ImpExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }

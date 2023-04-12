@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
-import { ImpEducacionServiceService } from 'src/app/service/imp-educacion-service.service';
+import { ImpEducacionService } from 'src/app/service/imp-educacion.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class EducacionComponent implements OnInit {
 
   edu:Educacion[] = [];
-  constructor(private impEducacionService: ImpEducacionServiceService, private tokenService: TokenService) { }
+  constructor(private impEducacionService: ImpEducacionService, private tokenService: TokenService) { }
 
   isLogged = false;
 

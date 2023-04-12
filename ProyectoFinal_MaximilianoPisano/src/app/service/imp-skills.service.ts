@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Skills } from '../model/skills';
+import { Skill } from '../model/skill';
 
 @Injectable({
   providedIn: 'root'
@@ -12,19 +12,19 @@ export class ImpSkillsServiceService {
   skillsURL = environment.URL + 'Skills/'
   constructor(private httpClient: HttpClient) { }
 
-  public lista():Observable<Skills[]>{
-    return this.httpClient.get<Skills[]>(this.skillsURL + 'lista');
+  public lista():Observable<Skill[]>{
+    return this.httpClient.get<Skill[]>(this.skillsURL + 'lista');
   }
 
-  public detail(id:number):Observable<Skills>{
-    return this.httpClient.get<Skills>(this.skillsURL + `detail/${id}`);
+  public detail(id:number):Observable<Skill>{
+    return this.httpClient.get<Skill>(this.skillsURL + `detail/${id}`);
   }
 
-  public save(skills: Skills):Observable<any>{
+  public save(skills: Skill):Observable<any>{
     return this.httpClient.post<any>(this.skillsURL + 'create', skills);
   }
 
-  public update(id:number, skills: Skills):Observable<any>{
+  public update(id:number, skills: Skill):Observable<any>{
     return this.httpClient.put<any>(this.skillsURL + `update/${id}`, skills);
   }
 

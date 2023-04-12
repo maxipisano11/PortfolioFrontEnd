@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
-import { ImpEducacionServiceService } from 'src/app/service/imp-educacion-service.service';
+import { ImpEducacionService} from 'src/app/service/imp-educacion.service';
 
 @Component({
   selector: 'app-new-educacion',
@@ -13,7 +13,7 @@ export class NewEducacionComponent implements OnInit {
   periodoEdu: string ='';
   nombreEdu: string ='';
   descripcionEdu: string = '';
-  constructor(private impEducacionService: ImpEducacionServiceService, private router: Router) { }
+  constructor(private impEducacionService: ImpEducacionService, private router: Router) { }
 
   ngOnInit(): void {
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Skills } from 'src/app/model/skills';
-import { ImpSkillsServiceService } from 'src/app/service/imp-skills-service.service';
+import { Skill } from 'src/app/model/skill';
+import { ImpSkillsServiceService } from 'src/app/service/imp-skills.service';
 
 @Component({
   selector: 'app-edit-skill',
@@ -10,7 +10,7 @@ import { ImpSkillsServiceService } from 'src/app/service/imp-skills-service.serv
 })
 export class EditSkillComponent implements OnInit {
 
-  skill : Skills = null;
+  skill : Skill = null;
 
   constructor(private impSkillsService: ImpSkillsServiceService, private activatedRouter: ActivatedRoute, private router: Router) { }
 

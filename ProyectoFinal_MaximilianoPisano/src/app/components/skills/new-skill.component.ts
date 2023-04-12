@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Skills } from 'src/app/model/skills';
-import { ImpSkillsServiceService } from 'src/app/service/imp-skills-service.service';
+import { Skill } from 'src/app/model/skill';
+import { ImpSkillsServiceService } from 'src/app/service/imp-skills.service';
 
 @Component({
   selector: 'app-new-skill',
@@ -17,7 +17,7 @@ export class NewSkillComponent implements OnInit {
   }
   
   onCreate(): void{
-    const skill = new Skills(this.nombre, this.porcentaje);
+    const skill = new Skill(this.nombre, this.porcentaje);
     this.impSkillsService.save(skill).subscribe(data=>{
       alert("Experiencia agregada");
       this.router.navigate(['']);

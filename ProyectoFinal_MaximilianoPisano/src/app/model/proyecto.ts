@@ -1,4 +1,4 @@
-export class Proyectos {
+export class Proyecto {
     id? : number;
     periodo: string;
     nombre: string;

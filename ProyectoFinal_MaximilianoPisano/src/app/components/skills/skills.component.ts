@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Skills } from 'src/app/model/skills';
-import { ImpSkillsServiceService } from 'src/app/service/imp-skills-service.service';
+import { Skill } from 'src/app/model/skill';
+import { ImpSkillsServiceService } from 'src/app/service/imp-skills.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  skill: Skills[] = [];
+  skills: Skill[] = [];
 
   constructor(private impSkillsService: ImpSkillsServiceService, private token: TokenService) { }
   isLogged = false;
@@ -26,7 +26,7 @@ export class SkillsComponent implements OnInit {
   cargarSkills(): void{
     this.impSkillsService.lista().subscribe(
       data => {
-        this.skill = data;
+        this.skills = data;
       }
     )
   }

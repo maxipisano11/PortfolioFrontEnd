@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Proyectos } from 'src/app/model/proyectos';
+import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
   styleUrls: ['./edit-proyecto.component.css']
 })
 export class EditProyectoComponent implements OnInit {
-  proyecto : Proyectos = null;
+  proyecto : Proyecto = null;
   constructor(private impProyectosService: ProyectosService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

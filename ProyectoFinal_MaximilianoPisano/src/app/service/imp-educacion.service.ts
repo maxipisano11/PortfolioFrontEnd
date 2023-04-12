@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
 @Injectable({
   providedIn: 'root'
 })
-export class ImpEducacionServiceService {
+export class ImpEducacionService {
 
   educacionURL = environment.URL + 'educacion/'
   constructor(private httpClient: HttpClient) { }

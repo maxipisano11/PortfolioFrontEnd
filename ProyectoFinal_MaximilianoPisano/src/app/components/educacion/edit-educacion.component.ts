@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
-import { ImpEducacionServiceService } from 'src/app/service/imp-educacion-service.service';
+import { ImpEducacionService } from 'src/app/service/imp-educacion.service';
 
 @Component({
   selector: 'app-edit-educacion',
@@ -12,7 +12,7 @@ export class EditEducacionComponent implements OnInit {
 
   edu : Educacion = null;
 
-  constructor(private impEducacionService: ImpEducacionServiceService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private impEducacionService: ImpEducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id= this.activatedRouter.snapshot.params['id'];

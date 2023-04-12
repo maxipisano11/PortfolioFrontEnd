@@ -25,7 +25,7 @@ getImages(){
   .then(async response => {
     for(let item of response.items){
       this.url = await getDownloadURL(item);
-      console.log("La URL es: " + this.url);
+      //console.log("La URL es: " + this.url);
     }
   })
   .catch(

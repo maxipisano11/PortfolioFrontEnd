@@ -1,4 +1,8 @@
-<section id="about">
+<div class="center" *ngIf="!persona">
+    <h5>Aguardando datos de servidor externo...</h5>
+    <span class="loader"></span>
+</div>
+<section id="about" *ngIf="persona">
     <img id="fotoCv" src="{{persona?.img}}" alt="FotoDePerfil">
     <div class="row">
         <button type="button" class="btn btn-primary col-1" routerLink="/editabout/1" *ngIf="isLogged">

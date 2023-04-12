@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Proyectos } from 'src/app/model/proyectos';
+import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
@@ -21,7 +21,7 @@ export class NewProyectoComponent implements OnInit {
   }
 
   onCreate(): void{
-    const expe = new Proyectos(this.periodo, this.nombre, this.descripcion, this.enlace);
+    const expe = new Proyecto(this.periodo, this.nombre, this.descripcion, this.enlace);
     this.impProyectosService.save(expe).subscribe(data=>{
       alert("Proyecto agregado");
       this.router.navigate(['']);

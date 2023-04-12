@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Proyectos } from 'src/app/model/proyectos';
+import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 import { TokenService } from 'src/app/service/token.service';
 
@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectosComponent implements OnInit {
 
-  proyectos: Proyectos[] = [];
+  proyectos: Proyecto[] = [];
 
   constructor(private impProyectosService: ProyectosService, private tokenService: TokenService) { }
 
